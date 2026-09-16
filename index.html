@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Keerthana &amp; Dhananjaya — Wedding Invitation</title>
+    <meta
+      name="description"
+      content="Keerthana R weds Dhananjaya B R. Reception 13 October 2026, Muhurtham 14 October 2026 at Brundavana Convention Hall, Bengaluru."
+    />
+    <meta name="theme-color" content="#6b1226" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Keerthana &amp; Dhananjaya — Wedding Invitation" />
+    <meta
+      property="og:description"
+      content="Reception 13 October 2026 · Muhurtham 14 October 2026 · Brundavana Convention Hall, Bengaluru. Your blessings mean everything to us."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236b1226'/%3E%3Cpath d='M16 25s-8-5-8-10.3A4.6 4.6 0 0 1 16 11a4.6 4.6 0 0 1 8 3.7C24 20 16 25 16 25z' fill='%23e3c77c'/%3E%3C/svg%3E"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Noto+Serif+Kannada:wght@400;600&family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="is-cover">
+    <div class="petals" id="petals" aria-hidden="true"></div>
+
+    <button class="lang-toggle" id="langToggle" type="button" data-i18n="langButton">ಕನ್ನಡ</button>
+
+    <!-- ---------- Cover ---------- -->
+    <section class="cover" id="cover">
+      <div class="cover__frame">
+        <div class="blessings blessings--cover">
+          <span data-i18n="blessing1"></span>
+          <span data-i18n="blessing3"></span>
+          <span data-i18n="blessing2"></span>
+          <span data-i18n="blessing4"></span>
+        </div>
+
+        <svg class="mandala" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="0.7">
+            <circle cx="50" cy="50" r="30" />
+            <circle cx="50" cy="50" r="23" stroke-dasharray="1 3" />
+            <circle cx="50" cy="50" r="14" />
+            <g class="mandala__petals">
+              <ellipse cx="50" cy="26" rx="5" ry="11" />
+              <ellipse cx="50" cy="74" rx="5" ry="11" />
+              <ellipse cx="26" cy="50" rx="11" ry="5" />
+              <ellipse cx="74" cy="50" rx="11" ry="5" />
+              <ellipse cx="33" cy="33" rx="4" ry="9" transform="rotate(-45 33 33)" />
+              <ellipse cx="67" cy="67" rx="4" ry="9" transform="rotate(-45 67 67)" />
+              <ellipse cx="67" cy="33" rx="4" ry="9" transform="rotate(45 67 33)" />
+              <ellipse cx="33" cy="67" rx="4" ry="9" transform="rotate(45 33 67)" />
+            </g>
+          </g>
+        </svg>
+
+        <p class="eyebrow" data-i18n="coverEyebrow"></p>
+
+        <h1 class="cover__names">
+          <span class="script" data-i18n="brideName"></span>
+          <span class="cover__amp" data-i18n="joinWord"></span>
+          <span class="script" data-i18n="groomName"></span>
+        </h1>
+
+        <p class="cover__date" data-i18n="coverDate"></p>
+
+        <button class="open-btn" id="openBtn" type="button">
+          <span data-i18n="coverOpen"></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ---------- Invitation ---------- -->
+    <main class="invite" id="invite">
+      <div class="blessings blessings--top reveal">
+        <span data-i18n="blessing1"></span>
+        <span data-i18n="blessing3"></span>
+        <span data-i18n="blessing2"></span>
+        <span data-i18n="blessing4"></span>
+      </div>
+
+      <!-- Hero -->
+      <section class="section hero">
+        <div class="couple reveal">
+          <div class="couple__person">
+            <h2 class="couple__name script" data-i18n="brideName"></h2>
+            <p class="couple__degree" data-i18n="brideDegree"></p>
+            <p class="couple__of" data-i18n="brideRelation"></p>
+            <p class="couple__parents" data-i18n="brideParents"></p>
+          </div>
+
+          <div class="couple__knot" aria-hidden="true">
+            <svg viewBox="0 0 40 40">
+              <path
+                d="M20 33s-11-6.8-11-14.2A6.2 6.2 0 0 1 20 15a6.2 6.2 0 0 1 11 3.8C31 26.2 20 33 20 33z"
+              />
+            </svg>
+          </div>
+
+          <div class="couple__person">
+            <h2 class="couple__name script" data-i18n="groomName"></h2>
+            <p class="couple__degree" data-i18n="groomDegree"></p>
+            <p class="couple__of" data-i18n="groomRelation"></p>
+            <p class="couple__parents" data-i18n="groomParents"></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider reveal" aria-hidden="true">
+        <span></span><i>❦</i><span></span>
+      </div>
+
+      <!-- Countdown -->
+      <section class="section countdown-section reveal">
+        <h3 class="section__title" data-i18n="countdownTitle"></h3>
+        <div class="countdown" id="countdown">
+          <div class="cd">
+            <strong id="cdDays">00</strong><small data-i18n="cdDays"></small>
+          </div>
+          <div class="cd">
+            <strong id="cdHours">00</strong><small data-i18n="cdHours"></small>
+          </div>
+          <div class="cd">
+            <strong id="cdMins">00</strong><small data-i18n="cdMins"></small>
+          </div>
+          <div class="cd">
+            <strong id="cdSecs">00</strong><small data-i18n="cdSecs"></small>
+          </div>
+        </div>
+        <p class="countdown__done" id="countdownDone" data-i18n="countdownDone" hidden></p>
+      </section>
+
+      <!-- Invitation body -->
+      <section class="section card-section reveal">
+        <div class="paper">
+          <h3 class="section__title" data-i18n="inviteTitle"></h3>
+          <p class="paper__body" data-i18n="inviteBody"></p>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section class="section reveal">
+        <h3 class="section__title" data-i18n="eventsTitle"></h3>
+        <div class="events">
+          <article class="event">
+            <div class="event__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v3M5.5 6.5l2 2M18.5 6.5l-2 2M4 21h16M7 21c0-4 2.2-7 5-7s5 3 5 7" />
+              </svg>
+            </div>
+            <h4 data-i18n="receptionName"></h4>
+            <p class="event__day" data-i18n="receptionDay"></p>
+            <p class="event__time" data-i18n="receptionTime"></p>
+            <p class="event__note" data-i18n="receptionNote"></p>
+          </article>
+
+          <article class="event event--primary">
+            <div class="event__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z" />
+              </svg>
+            </div>
+            <h4 data-i18n="muhurthamName"></h4>
+            <p class="event__day" data-i18n="muhurthamDay"></p>
+            <p class="event__time" data-i18n="muhurthamTime"></p>
+            <p class="event__note" data-i18n="muhurthamNote"></p>
+            <p class="event__lagna">
+              <span data-i18n="lagnaLabel"></span>: <b data-i18n="lagnaValue"></b>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Venue -->
+      <section class="section reveal">
+        <h3 class="section__title" data-i18n="venueTitle"></h3>
+        <div class="venue">
+          <div class="venue__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12z" />
+              <circle cx="12" cy="10" r="2.6" />
+            </svg>
+          </div>
+          <h4 class="venue__name" data-i18n="venueName"></h4>
+          <p class="venue__address" data-i18n="venueAddress"></p>
+          <a class="btn btn--ghost" id="mapsLink" href="#" target="_blank" rel="noopener">
+            <span data-i18n="venueButton"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Actions -->
+      <section class="section reveal">
+        <h3 class="section__title" data-i18n="actionsTitle"></h3>
+        <div class="actions">
+          <button class="btn" id="calendarBtn" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="16" rx="2" />
+              <path d="M3.5 10h17M8 3v4M16 3v4" />
+            </svg>
+            <span data-i18n="calendarButton"></span>
+          </button>
+          <button class="btn" id="shareBtn" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 16V4M8 8l4-4 4 4M5 14v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5" />
+            </svg>
+            <span data-i18n="shareButton"></span>
+          </button>
+          <a class="btn btn--wa" id="waBtn" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 12a8 8 0 0 1-11.9 7L4 20l1.1-4A8 8 0 1 1 20 12z"
+              />
+              <path d="M9 10c0 3 2 5 5 5.2.9.1 1.4-.4 1.6-1l-2-1-1 .8c-1-.5-1.8-1.3-2.2-2.3l.8-1-1-2c-.7.2-1.2.7-1.2 1.3z" />
+            </svg>
+            <span data-i18n="whatsappButton"></span>
+          </a>
+        </div>
+        <p class="copied" id="copied" hidden>Link copied</p>
+      </section>
+
+      <div class="divider reveal" aria-hidden="true">
+        <span></span><i>❦</i><span></span>
+      </div>
+
+      <!-- Footer -->
+      <footer class="section footer reveal">
+        <p class="footer__title" data-i18n="thanksTitle"></p>
+        <p class="footer__names" data-i18n="thanksNames"></p>
+        <p class="footer__compliments">
+          <span data-i18n="complimentsLabel"></span>:
+          <b data-i18n="complimentsValue"></b>
+        </p>
+      </footer>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
