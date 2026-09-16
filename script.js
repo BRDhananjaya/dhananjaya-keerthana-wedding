@@ -101,6 +101,7 @@
 
   /* ---------- Maps ---------- */
   document.getElementById("mapsLink").href =
+    C.meta.mapsUrl ||
     "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(C.meta.mapsQuery);
 
   /* ---------- Calendar (.ics with both events) ---------- */
@@ -108,16 +109,27 @@
     return new Date(iso).toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
   }
 
+  // RFC 5545 reserves comma, semicolon and backslash inside text values
+  function icsText(value) {
+    return String(value)
+      .replace(/([\\,;])/g, "\\$1")
+      .replace(/\r?\n/g, "\\n");
+  }
+
   function vevent(uid, title, startIso, endIso, description) {
+    var notes = description;
+    if (C.meta.mapsUrl) notes += "\nDirections: " + C.meta.mapsUrl;
+
     return [
       "BEGIN:VEVENT",
       "UID:" + uid,
       "DTSTAMP:" + icsStamp(new Date().toISOString()),
       "DTSTART:" + icsStamp(startIso),
       "DTEND:" + icsStamp(endIso),
-      "SUMMARY:" + title,
-      "DESCRIPTION:" + description,
-      "LOCATION:" + C.meta.mapsQuery,
+      "SUMMARY:" + icsText(title),
+      "DESCRIPTION:" + icsText(notes),
+      "LOCATION:" + icsText(C.meta.mapsQuery),
+      "URL:" + (C.meta.mapsUrl || ""),
       "END:VEVENT"
     ].join("\r\n");
   }

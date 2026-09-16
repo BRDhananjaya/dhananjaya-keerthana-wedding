@@ -6,6 +6,7 @@ window.CONTENT = {
     muhurthamEnd: "2026-10-14T09:30:00+05:30",
     receptionStart: "2026-10-13T19:30:00+05:30",
     receptionEnd: "2026-10-13T22:30:00+05:30",
+    mapsUrl: "https://maps.app.goo.gl/k8yoRXLY1vrum9fN6",
     mapsQuery: "Brundavana Convention Hall, Tulasi Nagar, Magadi Main Road, Byadarahalli, Bengaluru 560091"
   },
 
