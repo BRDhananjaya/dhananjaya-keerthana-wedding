@@ -731,6 +731,28 @@ body.is-cover .invite {
   font-weight: 500;
 }
 
+/* Licence credit: present and readable, but deliberately quiet */
+.footer__music {
+  max-width: 440px;
+  margin: 26px auto 0;
+  font-size: 0.68rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+  opacity: 0.68;
+}
+
+.footer__music a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+}
+
+.footer__music a:hover {
+  color: var(--green);
+}
+
 /* ---------- Larger screens ---------- */
 @media (min-width: 620px) {
   .couple {

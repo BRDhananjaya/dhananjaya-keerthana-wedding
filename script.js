@@ -16,6 +16,11 @@
       if (value !== undefined) el.innerHTML = value;
     });
 
+    // Set separately: the button holds SVG icons that innerHTML would wipe out
+    var btn = document.getElementById("musicToggle");
+    btn.title = dict.musicToggleTitle;
+    btn.setAttribute("aria-label", dict.musicToggleTitle);
+
     buildWhatsAppLink();
     localStorage.setItem("invite-lang", lang);
   }

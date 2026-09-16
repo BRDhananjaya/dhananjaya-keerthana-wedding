@@ -19,7 +19,7 @@ Kempegowdanagar, Byadarahalli, Bengaluru – 560 091
   falling petals
 - Emerald green, antique gold and ivory palette, with a faint floral watermark behind the page
 - English ⇄ Kannada toggle (choice is remembered on the device)
-- Background veena instrumental with a play/pause toggle, muted by choice and remembered
+- Background nadaswaram instrumental with a play/pause toggle, muted by choice and remembered
 - Live countdown to the Muhurtham
 - Groom's and bride's family details
 - Venue card linking to the exact Google Maps pin
@@ -48,15 +48,26 @@ the `meta` block at the top of the same file — nothing else needs touching.
 | `preview.jpg`                 | 1200×630 card shown when the link is shared             |
 | `images/cover-bg.jpg`         | Mandap photo behind the cover and the Muhurtham card    |
 | `images/floral-watermark.jpg` | Faint tiled floral pattern behind the page              |
-| `music/wedding-instrumental.mp3` | Background music                                     |
+| `music/nadaswaram-mangala-vadyam.mp3` | Background music                                |
 
 The three images were AI-generated for this invitation, so they carry no licence restrictions.
 
-The music is a 1:45 excerpt of **"Viriboni, rendered on the Veena"** by Smt. Pushpa Srivatsan,
-from Wikimedia Commons and released under **CC0** (public domain, no attribution required —
-credited here anyway). It was trimmed, loudness-normalised and fitted with fades so it loops
-cleanly. To swap in a different track, replace the file at the same path, or change the `src`
-on the `<audio>` element in `index.html`.
+### Music credit
+
+The background music is a 1:55 excerpt of
+**["Thakil & Nadaswaram during temple Deeparadhana"](https://commons.wikimedia.org/wiki/File:Thakil_%26_Nadaswaram_during_temple_Deeparadhana.ogg)**
+by **Vis M**, from Wikimedia Commons, licensed under
+**[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)**.
+
+The nadaswaram with thavil accompaniment is the traditional *mangala vadyam* ensemble played at
+South Indian weddings and temple rituals. The excerpt was trimmed from the calmer middle of the
+recording, high-pass filtered to remove live-recording rumble, loudness-normalised to −18 LUFS
+with peaks pulled back to −3.4 dB, and given fades at both ends so it loops without a jolt.
+
+**This licence requires attribution**, so the credit appears in two places and both must be kept
+if the track stays: this README, and a small line in the page footer (wired through `content.js`
+as `musicCredit`, in both languages). To swap in a different track, replace the file and update
+the `<audio>` `src` in `index.html` — and update or remove the credit to match.
 
 ### Changing the colours
 

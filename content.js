@@ -80,7 +80,12 @@ window.CONTENT = {
     shareText: "Dhananjaya & Keerthana are getting married! Reception 13 Oct 2026, Muhurtham 14 Oct 2026 at Brundavana Convention Hall, Bengaluru. Do join us:",
 
     complimentsLabel: "With best compliments from",
-    complimentsValue: "Relatives &amp; Friends"
+    complimentsValue: "Relatives &amp; Friends",
+
+    musicToggleTitle: "Play or pause the nadaswaram music",
+    musicCreditLabel: "Music",
+    musicCredit:
+      "&ldquo;<a href=\"https://commons.wikimedia.org/wiki/File:Thakil_%26_Nadaswaram_during_temple_Deeparadhana.ogg\" target=\"_blank\" rel=\"noopener\">Thakil &amp; Nadaswaram during temple Deeparadhana</a>&rdquo; by Vis M, licensed under <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>. Excerpt trimmed and volume-normalised."
   },
 
   kn: {
@@ -153,6 +158,11 @@ window.CONTENT = {
     shareText: "ಧನಂಜಯ ಮತ್ತು ಕೀರ್ತನ ಅವರ ವಿವಾಹ! ಆರತಕ್ಷತೆ 13-10-2026, ಮುಹೂರ್ತ 14-10-2026, ಬೃಂದಾವನ ಕನ್ವೆನ್ಷನ್ ಹಾಲ್, ಬೆಂಗಳೂರು. ದಯವಿಟ್ಟು ಆಗಮಿಸಿ:",
 
     complimentsLabel: "ತಮ್ಮ ಸುಆಗಮನವನ್ನು ಬಯಸುವವರು",
-    complimentsValue: "ಬಂಧು-ಮಿತ್ರರು"
+    complimentsValue: "ಬಂಧು-ಮಿತ್ರರು",
+
+    musicToggleTitle: "ನಾದಸ್ವರ ಸಂಗೀತವನ್ನು ಪ್ಲೇ ಅಥವಾ ನಿಲ್ಲಿಸಿ",
+    musicCreditLabel: "ಸಂಗೀತ",
+    musicCredit:
+      "ವಿಸ್ ಎಂ ಅವರ &ldquo;<a href=\"https://commons.wikimedia.org/wiki/File:Thakil_%26_Nadaswaram_during_temple_Deeparadhana.ogg\" target=\"_blank\" rel=\"noopener\">Thakil &amp; Nadaswaram during temple Deeparadhana</a>&rdquo; — <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a> ಪರವಾನಗಿ ಅಡಿಯಲ್ಲಿ. ಆಯ್ದ ಭಾಗವನ್ನು ಸಂಕ್ಷೇಪಿಸಿ ಧ್ವನಿ ಸರಿಪಡಿಸಲಾಗಿದೆ."
   }
 };
