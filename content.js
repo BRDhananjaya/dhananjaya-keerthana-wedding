@@ -13,22 +13,19 @@ window.CONTENT = {
   en: {
     htmlLang: "en",
     langButton: "ಕನ್ನಡ",
-    docTitle: "Keerthana & Dhananjaya — Wedding Invitation",
+    docTitle: "Dhananjaya & Keerthana — Wedding Invitation",
 
     blessing1: "॥ Sri Venkateshwara Swamy Prasanna ॥",
     blessing2: "॥ Sri Venugopala Swamy Prasanna ॥",
     blessing3: "॥ Sri Huchamma Devi Krupe ॥",
-    blessing4: "॥ Sri Mayamma Dyathamma Devi Krupe ॥",
+    blessing4: "॥ Sri Mayamma Dythamma Devi Krupe ॥",
 
     coverEyebrow: "Wedding Invitation",
-    coverAnd: "weds",
     coverDate: "13 &amp; 14 October 2026 · Bengaluru",
     coverOpen: "Tap to open",
 
     brideName: "Keerthana R",
-    brideDegree: "B.E.",
     groomName: "Dhananjaya B R",
-    groomDegree: "B.E., M.Tech",
     joinWord: "weds",
 
     countdownTitle: "Counting down to the Muhurtham",
@@ -47,14 +44,14 @@ window.CONTENT = {
     brideGrandparents: "(S/o Smt. Thimmamma &amp; Sri. Chikkathimmaiah)",
     brideNative: "D. Malligere, Koppa Hobli, Maddur Tq, Mandya Dist.",
     brideResidence: "No. 91, 6th Cross, Chowdeshwarinagar, Laggere, Bengaluru – 560 091",
-    brideRelation: "Eldest daughter of",
+    brideRelation: "Daughter of",
 
     groomFamilyTitle: "Groom's Family",
     groomParents: "Smt. Lakshmamma &amp; Sri. Ramakrishnegowda B.R",
     groomGrandparents: "(S/o Smt. Sarojamma &amp; Late Sri. Ramegowda)",
     groomNative: "Bandiganahalli Village, Devalapura Hobli, Nagamangala Tq, Mandya Dist.",
     groomResidence: "No. 43, Nandagokula, 2nd Main Road, Adichunchanagiri Layout, Herohalli, Bengaluru – 560 091",
-    groomRelation: "Eldest son of",
+    groomRelation: "Son of",
 
     eventsTitle: "The Celebrations",
     receptionName: "Reception",
@@ -80,10 +77,8 @@ window.CONTENT = {
     calendarButton: "Add to Calendar",
     shareButton: "Share Invitation",
     whatsappButton: "Send on WhatsApp",
-    shareText: "Keerthana & Dhananjaya are getting married! Reception 13 Oct 2026, Muhurtham 14 Oct 2026 at Brundavana Convention Hall, Bengaluru. Do join us:",
+    shareText: "Dhananjaya & Keerthana are getting married! Reception 13 Oct 2026, Muhurtham 14 Oct 2026 at Brundavana Convention Hall, Bengaluru. Do join us:",
 
-    thanksTitle: "Awaiting your presence",
-    thanksNames: "Smt. Indramma C.H &amp; Sri. Ramesh M.B<br />Smt. Lakshmamma &amp; Sri. Ramakrishnegowda B.R",
     complimentsLabel: "With best compliments from",
     complimentsValue: "Relatives &amp; Friends"
   },
@@ -91,22 +86,19 @@ window.CONTENT = {
   kn: {
     htmlLang: "kn",
     langButton: "English",
-    docTitle: "ಕೀರ್ತನ ಮತ್ತು ಧನಂಜಯ — ವಿವಾಹ ಆಮಂತ್ರಣ",
+    docTitle: "ಧನಂಜಯ ಮತ್ತು ಕೀರ್ತನ — ವಿವಾಹ ಆಮಂತ್ರಣ",
 
     blessing1: "॥ ಶ್ರೀ ವೆಂಕಟೇಶ್ವರ ಸ್ವಾಮಿ ಪ್ರಸನ್ನ ॥",
     blessing2: "॥ ಶ್ರೀ ವೇಣುಗೋಪಾಲ ಸ್ವಾಮಿ ಪ್ರಸನ್ನ ॥",
     blessing3: "॥ ಶ್ರೀ ಹುಚ್ಚಮ್ಮ ದೇವಿ ಕೃಪೆ ॥",
-    blessing4: "॥ ಶ್ರೀ ಮಾಯಮ್ಮ ದ್ಯಾತಮ್ಮ ದೇವಿ ಕೃಪೆ ॥",
+    blessing4: "॥ ಶ್ರೀ ಮಾಯಮ್ಮ ದೈತಮ್ಮ ದೇವಿ ಕೃಪೆ ॥",
 
     coverEyebrow: "ವಿವಾಹ ಆಮಂತ್ರಣ",
-    coverAnd: "ಜೊತೆ",
     coverDate: "13 ಮತ್ತು 14 ಅಕ್ಟೋಬರ್ 2026 · ಬೆಂಗಳೂರು",
     coverOpen: "ತೆರೆಯಲು ಸ್ಪರ್ಶಿಸಿ",
 
     brideName: "ಚಿ॥ ಸೌ॥ ಕೀರ್ತನ. ಆರ್",
-    brideDegree: "B.E.",
     groomName: "ಚಿ॥ ರಾ॥ ಧನಂಜಯ. ಬಿ.ಆರ್",
-    groomDegree: "B.E., M.Tech",
     joinWord: "ಜೊತೆ",
 
     countdownTitle: "ಮುಹೂರ್ತಕ್ಕೆ ಇನ್ನು",
@@ -125,14 +117,14 @@ window.CONTENT = {
     brideGrandparents: "(ಶ್ರೀಮತಿ ತಿಮ್ಮಮ್ಮ ಮತ್ತು ಶ್ರೀ ಚಿಕ್ಕತಿಮ್ಮಯ್ಯ ಅವರ ಮಗ)",
     brideNative: "ಡಿ. ಮಲ್ಲಿಗೆರೆ, ಕೊಪ್ಪ ಹೋಬಳಿ, ಮದ್ದೂರು ತಾಲೂಕು, ಮಂಡ್ಯ ಜಿಲ್ಲೆ",
     brideResidence: "ವಾಸ: ನಂ. 91, 6ನೇ ಅಡ್ಡರಸ್ತೆ, ಚೌಡೇಶ್ವರಿನಗರ, ಲಗ್ಗೆರೆ, ಬೆಂಗಳೂರು – 560 091",
-    brideRelation: "ಇವರ ಜೇಷ್ಠ ಪುತ್ರಿ",
+    brideRelation: "ಇವರ ಪುತ್ರಿ",
 
     groomFamilyTitle: "ವರನ ಕುಟುಂಬ",
     groomParents: "ಶ್ರೀಮತಿ ಲಕ್ಷ್ಮಮ್ಮ ಮತ್ತು ಶ್ರೀ ರಾಮಕೃಷ್ಣೇಗೌಡ. ಬಿ.ಆರ್",
     groomGrandparents: "(ಶ್ರೀಮತಿ ಸರೋಜಮ್ಮ ಮತ್ತು ದಿವಂಗತ ಶ್ರೀ ರಾಮೇಗೌಡ ಅವರ ಮಗ)",
     groomNative: "ಬಂಡಿಗನಹಳ್ಳಿ ಗ್ರಾಮ, ದೇವಲಾಪುರ ಹೋಬಳಿ, ನಾಗಮಂಗಲ ತಾಲೂಕು, ಮಂಡ್ಯ ಜಿಲ್ಲೆ",
     groomResidence: "ವಾಸ: ನಂ. 43, ನಂದಗೋಕುಲ, 2ನೇ ಮುಖ್ಯರಸ್ತೆ, ಆದಿಚುಂಚನಗಿರಿ ಬಡಾವಣೆ, ಹೇರೋಹಳ್ಳಿ, ಬೆಂಗಳೂರು – 560 091",
-    groomRelation: "ಇವರ ಜೇಷ್ಠ ಪುತ್ರ",
+    groomRelation: "ಇವರ ಪುತ್ರ",
 
     eventsTitle: "ಶುಭ ಸಮಾರಂಭಗಳು",
     receptionName: "ಆರತಕ್ಷತೆ",
@@ -158,10 +150,8 @@ window.CONTENT = {
     calendarButton: "ಕ್ಯಾಲೆಂಡರ್‌ಗೆ ಸೇರಿಸಿ",
     shareButton: "ಆಮಂತ್ರಣ ಹಂಚಿಕೊಳ್ಳಿ",
     whatsappButton: "ವಾಟ್ಸ್‌ಆ್ಯಪ್‌ನಲ್ಲಿ ಕಳುಹಿಸಿ",
-    shareText: "ಕೀರ್ತನ ಮತ್ತು ಧನಂಜಯ ಅವರ ವಿವಾಹ! ಆರತಕ್ಷತೆ 13-10-2026, ಮುಹೂರ್ತ 14-10-2026, ಬೃಂದಾವನ ಕನ್ವೆನ್ಷನ್ ಹಾಲ್, ಬೆಂಗಳೂರು. ದಯವಿಟ್ಟು ಆಗಮಿಸಿ:",
+    shareText: "ಧನಂಜಯ ಮತ್ತು ಕೀರ್ತನ ಅವರ ವಿವಾಹ! ಆರತಕ್ಷತೆ 13-10-2026, ಮುಹೂರ್ತ 14-10-2026, ಬೃಂದಾವನ ಕನ್ವೆನ್ಷನ್ ಹಾಲ್, ಬೆಂಗಳೂರು. ದಯವಿಟ್ಟು ಆಗಮಿಸಿ:",
 
-    thanksTitle: "ತಮ್ಮ ಆಗಮನಾಭಿಲಾಷಿಗಳು",
-    thanksNames: "ಶ್ರೀಮತಿ ಇಂದ್ರಮ್ಮ. ಸಿ.ಎಚ್. ಮತ್ತು ಶ್ರೀ ರಮೇಶ್. ಎಂ.ಬಿ<br />ಶ್ರೀಮತಿ ಲಕ್ಷ್ಮಮ್ಮ ಮತ್ತು ಶ್ರೀ ರಾಮಕೃಷ್ಣೇಗೌಡ. ಬಿ.ಆರ್",
     complimentsLabel: "ತಮ್ಮ ಸುಆಗಮನವನ್ನು ಬಯಸುವವರು",
     complimentsValue: "ಬಂಧು-ಮಿತ್ರರು"
   }

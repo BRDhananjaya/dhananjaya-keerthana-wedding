@@ -1,20 +1,21 @@
 :root {
-  --maroon: #6b1226;
-  --maroon-soft: #8a2440;
-  --gold: #c19a3d;
-  --gold-light: #e3c77c;
-  --pink: #c2185b;
-  --cream: #fdf7ee;
-  --cream-deep: #f6e9d7;
-  --ink: #3c2a22;
-  --ink-soft: #6d564a;
+  --green: #0e4d3c;
+  --green-soft: #17654e;
+  --green-deep: #05271d;
+  --gold: #bf9a3c;
+  --gold-light: #e8d29a;
+  --accent: #a97a1c;
+  --cream: #fdf8ef;
+  --cream-deep: #f3ead6;
+  --ink: #2f3b33;
+  --ink-soft: #5d6b60;
 
   --serif: "Cormorant Garamond", "Noto Serif Kannada", Georgia, serif;
   --display: "Marcellus", "Noto Serif Kannada", Georgia, serif;
   --script: "Great Vibes", "Noto Serif Kannada", cursive;
 
   --radius: 18px;
-  --shadow: 0 18px 45px -20px rgba(107, 18, 38, 0.35);
+  --shadow: 0 18px 45px -20px rgba(6, 42, 31, 0.34);
 }
 
 /* Kannada needs a text-serif face for every string, script fonts have no coverage */
@@ -41,6 +42,19 @@ body {
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+/* Faint floral watermark behind the whole invitation */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url("images/floral-watermark.jpg") repeat;
+  background-size: 290px;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 body.is-cover {
@@ -71,7 +85,7 @@ svg {
   position: absolute;
   top: -8vh;
   border-radius: 60% 0 60% 0;
-  background: linear-gradient(135deg, #f7c9d8, #e79ab4);
+  background: linear-gradient(135deg, #fdf1d6, #e0bd78);
   opacity: 0.75;
   animation: fall linear infinite;
 }
@@ -85,17 +99,24 @@ svg {
   }
 }
 
-/* ---------- Language toggle ---------- */
-.lang-toggle {
+/* ---------- Top bar: music + language ---------- */
+.topbar {
   position: fixed;
   top: 14px;
   right: 14px;
   z-index: 10;
-  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-toggle,
+.music-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font: inherit;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
-  color: var(--maroon);
+  color: var(--green);
   background: rgba(255, 253, 248, 0.9);
   border: 1px solid var(--gold);
   border-radius: 999px;
@@ -104,10 +125,52 @@ svg {
   transition: background 0.25s, color 0.25s, transform 0.2s;
 }
 
-.lang-toggle:hover {
-  background: var(--maroon);
+.lang-toggle {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.lang-toggle:hover,
+.music-toggle:hover {
+  background: var(--green);
   color: var(--gold-light);
   transform: translateY(-1px);
+}
+
+.music-toggle {
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+}
+
+.music-toggle svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.7;
+}
+
+/* Show a struck-through note until the track is actually playing */
+.music-toggle .icon-note,
+.music-toggle.is-playing .icon-muted {
+  display: none;
+}
+
+.music-toggle .icon-muted,
+.music-toggle.is-playing .icon-note {
+  display: block;
+}
+
+.music-toggle.is-playing {
+  background: var(--green);
+  color: var(--gold-light);
+  animation: pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    box-shadow: 0 0 0 6px rgba(191, 154, 60, 0.18);
+  }
 }
 
 /* ---------- Cover ---------- */
@@ -118,7 +181,16 @@ svg {
   display: grid;
   place-items: center;
   padding: 22px 16px;
-  background: radial-gradient(circle at 50% 25%, #7d1a30 0%, var(--maroon) 55%, #4a0c1a 100%);
+  background-color: var(--green-deep);
+  background-image: radial-gradient(
+      circle at 50% 28%,
+      rgba(23, 101, 78, 0.7) 0%,
+      rgba(14, 77, 60, 0.86) 50%,
+      rgba(5, 39, 29, 0.95) 100%
+    ),
+    url("images/cover-bg.jpg");
+  background-size: cover, cover;
+  background-position: center, center;
   color: var(--cream);
   transition: opacity 0.9s ease, transform 0.9s ease, visibility 0.9s;
 }
@@ -186,7 +258,7 @@ svg {
 .blessings--top {
   max-width: 520px;
   margin: 26px auto 0;
-  color: var(--maroon-soft);
+  color: var(--green-soft);
   text-align: center;
   opacity: 0.8;
 }
@@ -246,7 +318,7 @@ svg {
   font-size: 0.8rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--maroon);
+  color: var(--green);
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
   border: 0;
   border-radius: 999px;
@@ -297,7 +369,7 @@ body.is-cover .invite {
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--maroon);
+  color: var(--green);
 }
 
 .section__title::after {
@@ -355,20 +427,12 @@ body.is-cover .invite {
 .couple__name {
   margin: 0;
   font-size: clamp(2rem, 9.5vw, 3rem);
-  color: var(--maroon);
+  color: var(--green);
   line-height: 1.2;
 }
 
-.couple__degree {
-  margin: 2px 0 10px;
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
 .couple__of {
-  margin: 0;
+  margin: 10px 0 0;
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -385,12 +449,12 @@ body.is-cover .invite {
   justify-self: center;
   width: 40px;
   height: 40px;
-  color: var(--pink);
+  color: var(--accent);
   animation: beat 2.4s ease-in-out infinite;
 }
 
 .couple__knot svg {
-  fill: rgba(194, 24, 91, 0.12);
+  fill: rgba(169, 122, 28, 0.14);
 }
 
 @keyframes beat {
@@ -424,7 +488,7 @@ body.is-cover .invite {
   font-family: var(--display);
   font-size: clamp(1.35rem, 6.5vw, 1.9rem);
   font-weight: 400;
-  color: var(--maroon);
+  color: var(--green);
   font-variant-numeric: tabular-nums;
 }
 
@@ -440,7 +504,7 @@ body.is-cover .invite {
 .countdown__done {
   margin: 16px 0 0;
   font-size: 1.05rem;
-  color: var(--pink);
+  color: var(--accent);
 }
 
 /* ---------- Paper card ---------- */
@@ -489,7 +553,11 @@ body.is-cover .invite {
 }
 
 .event--primary {
-  background: linear-gradient(160deg, #74142a, var(--maroon));
+  background-color: var(--green);
+  background-image: linear-gradient(160deg, rgba(22, 100, 76, 0.88), rgba(10, 60, 46, 0.95)),
+    url("images/cover-bg.jpg");
+  background-size: cover, cover;
+  background-position: center, center;
   border-color: rgba(227, 199, 124, 0.5);
   color: var(--cream);
 }
@@ -523,7 +591,7 @@ body.is-cover .invite {
   margin: 4px 0 0;
   font-family: var(--display);
   font-size: clamp(1.05rem, 4.4vw, 1.25rem);
-  color: var(--pink);
+  color: var(--accent);
 }
 
 .event--primary .event__time {
@@ -565,7 +633,7 @@ body.is-cover .invite {
   width: 40px;
   height: 40px;
   margin: 0 auto 12px;
-  color: var(--pink);
+  color: var(--accent);
 }
 
 .venue__name {
@@ -573,7 +641,7 @@ body.is-cover .invite {
   font-family: var(--display);
   font-size: clamp(1.2rem, 5.2vw, 1.55rem);
   font-weight: 400;
-  color: var(--maroon);
+  color: var(--green);
 }
 
 .venue__address {
@@ -602,17 +670,17 @@ body.is-cover .invite {
   letter-spacing: 0.04em;
   text-decoration: none;
   color: var(--cream);
-  background: linear-gradient(135deg, var(--maroon-soft), var(--maroon));
+  background: linear-gradient(135deg, var(--green-soft), var(--green));
   border: 1px solid transparent;
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 12px 26px -16px rgba(107, 18, 38, 0.9);
+  box-shadow: 0 12px 26px -16px rgba(6, 42, 31, 0.9);
   transition: transform 0.22s, box-shadow 0.22s, background 0.22s;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 30px -18px rgba(107, 18, 38, 0.95);
+  box-shadow: 0 18px 30px -18px rgba(6, 42, 31, 0.95);
 }
 
 .btn svg {
@@ -622,20 +690,21 @@ body.is-cover .invite {
 }
 
 .btn--ghost {
-  color: var(--maroon);
+  color: var(--green);
   background: transparent;
   border-color: var(--gold);
   box-shadow: none;
 }
 
 .btn--ghost:hover {
-  background: var(--maroon);
+  background: var(--green);
   color: var(--gold-light);
 }
 
 .btn--wa {
-  background: linear-gradient(135deg, #34c15c, #1f8f45);
-  box-shadow: 0 12px 26px -16px rgba(31, 143, 69, 0.9);
+  background: linear-gradient(135deg, #2ee06f, #17ab4f);
+  color: #05271d;
+  box-shadow: 0 12px 26px -16px rgba(23, 171, 79, 0.9);
 }
 
 .copied {
@@ -651,22 +720,6 @@ body.is-cover .invite {
   padding-bottom: 10px;
 }
 
-.footer__title {
-  margin: 0 0 10px;
-  font-family: var(--display);
-  font-size: 0.78rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-.footer__names {
-  margin: 0 0 22px;
-  font-size: clamp(1rem, 4vw, 1.15rem);
-  line-height: 1.9;
-  color: var(--maroon);
-}
-
 .footer__compliments {
   margin: 0;
   font-size: 0.9rem;
@@ -674,7 +727,7 @@ body.is-cover .invite {
 }
 
 .footer__compliments b {
-  color: var(--maroon-soft);
+  color: var(--green-soft);
   font-weight: 500;
 }
 
@@ -715,7 +768,6 @@ html[lang="kn"] .couple__name {
 
 html[lang="kn"] .section__title,
 html[lang="kn"] .event h4,
-html[lang="kn"] .footer__title,
 html[lang="kn"] .eyebrow {
   letter-spacing: 0.08em;
 }

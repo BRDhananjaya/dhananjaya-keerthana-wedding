@@ -1,4 +1,4 @@
-# Keerthana R weds Dhananjaya B R — Digital Wedding Invitation
+# Dhananjaya B R weds Keerthana R — Digital Wedding Invitation
 
 A mobile-first, single-page digital invitation built with plain HTML, CSS and JavaScript.
 No build step, no dependencies — open `index.html` and it works.
@@ -15,11 +15,14 @@ Kempegowdanagar, Byadarahalli, Bengaluru – 560 091
 
 ## What's in it
 
-- Tap-to-open cover with deity blessings, animated mandala and falling petals
+- Tap-to-open cover over a wedding mandap photo, with deity blessings, animated mandala and
+  falling petals
+- Emerald green, antique gold and ivory palette, with a faint floral watermark behind the page
 - English ⇄ Kannada toggle (choice is remembered on the device)
+- Background veena instrumental with a play/pause toggle, muted by choice and remembered
 - Live countdown to the Muhurtham
-- Bride's and groom's family details
-- Venue card with a Google Maps link
+- Groom's and bride's family details
+- Venue card linking to the exact Google Maps pin
 - "Add to Calendar" button that downloads an `.ics` with both events
 - Native share sheet on mobile, plus a direct WhatsApp share button
 
@@ -35,8 +38,30 @@ Then open `http://localhost:8000`. (Opening `index.html` directly also works.)
 
 ## Editing the wording
 
-All text for both languages lives in `content.js`. Dates and the maps search string are in the
-`meta` block at the top of the same file — nothing else needs touching.
+All text for both languages lives in `content.js`. Dates, the maps link and the address are in
+the `meta` block at the top of the same file — nothing else needs touching.
+
+## Assets and credits
+
+| File                          | What it is                                              |
+| ----------------------------- | ------------------------------------------------------- |
+| `preview.jpg`                 | 1200×630 card shown when the link is shared             |
+| `images/cover-bg.jpg`         | Mandap photo behind the cover and the Muhurtham card    |
+| `images/floral-watermark.jpg` | Faint tiled floral pattern behind the page              |
+| `music/wedding-instrumental.mp3` | Background music                                     |
+
+The three images were AI-generated for this invitation, so they carry no licence restrictions.
+
+The music is a 1:45 excerpt of **"Viriboni, rendered on the Veena"** by Smt. Pushpa Srivatsan,
+from Wikimedia Commons and released under **CC0** (public domain, no attribution required —
+credited here anyway). It was trimmed, loudness-normalised and fitted with fades so it loops
+cleanly. To swap in a different track, replace the file at the same path, or change the `src`
+on the `<audio>` element in `index.html`.
+
+### Changing the colours
+
+The whole palette is defined once, in the `:root` block at the top of `styles.css`. Changing
+`--green`, `--green-soft`, `--green-deep` and `--gold` recolours the entire page.
 
 ## Live link
 
@@ -62,6 +87,6 @@ clear it with `git config --local --unset http.proxy` and the same for `https.pr
 
 ## Optional polish
 
-- **Link preview image:** add a photo named `preview.jpg` (1200×630) to this folder and add
-  `<meta property="og:image" content="preview.jpg" />` inside `<head>`, so WhatsApp shows a picture.
-- **Background music:** drop an audio file in the folder and wire up a small play/pause toggle.
+- **Your own photos:** swap `images/cover-bg.jpg` for a real photo of the two of you, keeping it
+  dark enough that the gold text on the cover stays readable.
+- **RSVP:** a Google Form link in the actions row is the simplest way to collect replies.

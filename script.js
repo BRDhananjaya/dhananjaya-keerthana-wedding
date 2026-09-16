@@ -33,6 +33,8 @@
     document.getElementById("invite").style.opacity = "1";
     window.scrollTo({ top: 0 });
     setTimeout(startReveal, 80);
+    // Opening is a user gesture, which is the only moment browsers allow audio to start
+    if (musicWanted) playMusic();
   }
 
   document.getElementById("openBtn").addEventListener("click", openInvite);
@@ -138,21 +140,21 @@
     var ics = [
       "BEGIN:VCALENDAR",
       "VERSION:2.0",
-      "PRODID:-//Keerthana Dhananjaya Wedding//EN",
+      "PRODID:-//Dhananjaya Keerthana Wedding//EN",
       "CALSCALE:GREGORIAN",
       vevent(
-        "reception-2026@keerthana-dhananjaya",
-        "Reception - Keerthana & Dhananjaya",
+        "reception-2026@dhananjaya-keerthana",
+        "Reception - Dhananjaya & Keerthana",
         C.meta.receptionStart,
         C.meta.receptionEnd,
-        "Reception of Keerthana R and Dhananjaya B R"
+        "Reception of Dhananjaya B R and Keerthana R"
       ),
       vevent(
-        "muhurtham-2026@keerthana-dhananjaya",
-        "Muhurtham - Keerthana & Dhananjaya",
+        "muhurtham-2026@dhananjaya-keerthana",
+        "Muhurtham - Dhananjaya & Keerthana",
         C.meta.muhurthamStart,
         C.meta.muhurthamEnd,
-        "Wedding of Keerthana R and Dhananjaya B R - Vrushika Lagna"
+        "Wedding of Dhananjaya B R and Keerthana R - Vrushika Lagna"
       ),
       "END:VCALENDAR"
     ].join("\r\n");
@@ -160,7 +162,7 @@
     var url = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
     var a = document.createElement("a");
     a.href = url;
-    a.download = "keerthana-dhananjaya-wedding.ics";
+    a.download = "dhananjaya-keerthana-wedding.ics";
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -198,6 +200,53 @@
       navigator.share(payload).catch(function () {});
     } else if (navigator.clipboard) {
       navigator.clipboard.writeText(shareMessage()).then(flashCopied, function () {});
+    }
+  });
+
+  /* ---------- Music ----------
+     The toggle is shown optimistically because iOS ignores metadata preloading,
+     and is only removed if the file genuinely fails to load. */
+  var audio = document.getElementById("music");
+  var musicBtn = document.getElementById("musicToggle");
+  var musicWanted = localStorage.getItem("invite-music") !== "off";
+
+  audio.volume = 0.5;
+
+  audio.addEventListener("error", function () {
+    musicBtn.hidden = true;
+  });
+
+  function setMusicState(playing) {
+    musicBtn.classList.toggle("is-playing", playing);
+    musicBtn.setAttribute("aria-pressed", playing ? "true" : "false");
+  }
+
+  function playMusic() {
+    var attempt = audio.play();
+    if (attempt && attempt.then) {
+      attempt.then(
+        function () {
+          setMusicState(true);
+        },
+        function () {
+          setMusicState(false);
+        }
+      );
+    } else {
+      setMusicState(true);
+    }
+  }
+
+  musicBtn.addEventListener("click", function () {
+    if (audio.paused) {
+      musicWanted = true;
+      localStorage.setItem("invite-music", "on");
+      playMusic();
+    } else {
+      audio.pause();
+      musicWanted = false;
+      localStorage.setItem("invite-music", "off");
+      setMusicState(false);
     }
   });
 
