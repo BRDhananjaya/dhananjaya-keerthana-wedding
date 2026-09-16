@@ -4,7 +4,7 @@ window.CONTENT = {
     // Muhurtham: 14 Oct 2026, 09:00-09:30 IST
     muhurthamStart: "2026-10-14T09:00:00+05:30",
     muhurthamEnd: "2026-10-14T09:30:00+05:30",
-    receptionStart: "2026-10-13T19:30:00+05:30",
+    receptionStart: "2026-10-13T18:30:00+05:30",
     receptionEnd: "2026-10-13T22:30:00+05:30",
     mapsUrl: "https://maps.app.goo.gl/k8yoRXLY1vrum9fN6",
     mapsQuery: "Brundavana Convention Hall, Tulasi Nagar, Magadi Main Road, Byadarahalli, Bengaluru 560091"
@@ -56,7 +56,7 @@ window.CONTENT = {
     eventsTitle: "The Celebrations",
     receptionName: "Reception",
     receptionDay: "Tuesday, 13 October 2026",
-    receptionTime: "7:30 pm onwards",
+    receptionTime: "6:30 pm onwards",
     receptionNote: "Aarathakshathe — join us for an evening of festivity",
 
     muhurthamName: "Muhurtham",
@@ -134,7 +134,7 @@ window.CONTENT = {
     eventsTitle: "ಶುಭ ಸಮಾರಂಭಗಳು",
     receptionName: "ಆರತಕ್ಷತೆ",
     receptionDay: "13-10-2026ನೇ ಮಂಗಳವಾರ",
-    receptionTime: "ಸಂಜೆ 7.30 ರಿಂದ",
+    receptionTime: "ಸಂಜೆ 6.30 ರಿಂದ",
     receptionNote: "ಸಂಜೆಯ ಸಂಭ್ರಮದಲ್ಲಿ ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ",
 
     muhurthamName: "ಮುಹೂರ್ತ",

@@ -7,7 +7,7 @@ No build step, no dependencies — open `index.html` and it works.
 
 | Event      | Date                        | Time                   |
 | ---------- | --------------------------- | ---------------------- |
-| Reception  | Tuesday, 13 October 2026    | 7:30 pm onwards        |
+| Reception  | Tuesday, 13 October 2026    | 6:30 pm onwards        |
 | Muhurtham  | Wednesday, 14 October 2026  | 9:00 am – 9:30 am (Vrushika Lagna) |
 
 **Venue:** Brundavana Convention Hall, Tulasi Nagar, Vishwaneedam Post, Magadi Main Road,
