@@ -38,19 +38,27 @@ Then open `http://localhost:8000`. (Opening `index.html` directly also works.)
 All text for both languages lives in `content.js`. Dates and the maps search string are in the
 `meta` block at the top of the same file — nothing else needs touching.
 
-## Publishing so friends can open the link
+## Live link
 
-Any static host works. Two easy options:
+**https://brdhananjaya.github.io/dhananjaya-keerthana-wedding/**
 
-**Netlify Drop** — go to https://app.netlify.com/drop and drag this folder in. You get a live
-link in seconds, and can rename it to something like `keerthana-dhananjaya.netlify.app`.
+Hosted on GitHub Pages from the `main` branch. To publish a change, commit and push — the site
+rebuilds itself in a minute or two:
 
-**GitHub Pages** — push this folder to a GitHub repo, then in the repo go to
-Settings → Pages → Source: `main` branch, root folder. The site appears at
-`https://<username>.github.io/<repo>/`.
+```bash
+git add .
+git commit -m "Update wording"
+git push
+```
 
-Once live, paste the link into WhatsApp — the title and description preview come from the
-`og:` meta tags in `index.html`.
+Paste the link into WhatsApp and the title and description preview come from the `og:` meta tags
+in `index.html`.
+
+### Note on the corporate network
+
+This machine reaches GitHub through a proxy, which is already saved for this repo
+(`git config --local http.proxy`). If a push ever fails to connect from a different network,
+clear it with `git config --local --unset http.proxy` and the same for `https.proxy`.
 
 ## Optional polish
 
