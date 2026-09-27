@@ -344,6 +344,54 @@ svg {
   }
 }
 
+/* ---------- Scroll cue ---------- */
+.scroll-cue {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 9;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 9px 20px 7px;
+  font: inherit;
+  font-family: var(--display);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 26px -16px rgba(6, 42, 31, 0.8);
+  transform: translateX(-50%);
+  transition: opacity 0.45s ease, transform 0.45s ease, background 0.25s, color 0.25s,
+    visibility 0.45s;
+}
+
+.scroll-cue:hover {
+  background: var(--green);
+  color: var(--gold-light);
+}
+
+.scroll-cue svg {
+  width: 18px;
+  height: 11px;
+  animation: nudge 1.6s ease-in-out infinite;
+}
+
+/* Out of the way while the cover is up, and once the footer is reached */
+.scroll-cue.is-hidden,
+body.is-cover .scroll-cue {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(12px);
+  pointer-events: none;
+}
+
 /* ---------- Invitation shell ---------- */
 .invite {
   position: relative;
@@ -796,8 +844,13 @@ html[lang="kn"] .eyebrow {
 
 html[lang="kn"] .cd small,
 html[lang="kn"] .couple__of,
-html[lang="kn"] .event__lagna {
+html[lang="kn"] .event__lagna,
+html[lang="kn"] .scroll-cue {
   letter-spacing: 0.02em;
+}
+
+html[lang="kn"] .scroll-cue {
+  font-size: 0.68rem;
 }
 
 html[lang="kn"] .cd small {
