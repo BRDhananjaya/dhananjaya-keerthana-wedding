@@ -42,6 +42,7 @@
     document.getElementById("invite").style.opacity = "1";
     window.scrollTo({ top: 0 });
     setTimeout(startReveal, 80);
+    updateScrollCue();
   }
 
   document.getElementById("openBtn").addEventListener("click", openInvite);
@@ -81,6 +82,33 @@
       revealOnScroll();
     }
   }
+
+  /* ---------- Scroll cue ---------- */
+  var scrollCue = document.getElementById("scrollCue");
+  var cueTargets = Array.prototype.slice.call(document.querySelectorAll(".invite .section"));
+
+  function updateScrollCue() {
+    var remaining =
+      document.documentElement.scrollHeight - window.innerHeight - window.pageYOffset;
+    scrollCue.classList.toggle("is-hidden", remaining < 140);
+  }
+
+  // Land on the next section heading rather than an arbitrary offset
+  scrollCue.addEventListener("click", function () {
+    var next = cueTargets.filter(function (el) {
+      return el.getBoundingClientRect().top > window.innerHeight * 0.4;
+    })[0];
+
+    var top = next
+      ? next.getBoundingClientRect().top + window.pageYOffset - 20
+      : document.documentElement.scrollHeight;
+
+    window.scrollTo({ top: top, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", updateScrollCue, { passive: true });
+  window.addEventListener("resize", updateScrollCue);
+  updateScrollCue();
 
   /* ---------- Countdown ---------- */
   var target = new Date(C.meta.muhurthamStart).getTime();

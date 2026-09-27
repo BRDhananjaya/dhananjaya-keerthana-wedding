@@ -23,6 +23,7 @@ window.CONTENT = {
     coverEyebrow: "Wedding Invitation",
     coverDate: "13 &amp; 14 October 2026 · Bengaluru",
     coverOpen: "Tap to open",
+    scrollCue: "Scroll for more",
 
     brideName: "Keerthana R",
     groomName: "Dhananjaya B R",
@@ -101,6 +102,7 @@ window.CONTENT = {
     coverEyebrow: "ವಿವಾಹ ಆಮಂತ್ರಣ",
     coverDate: "13 ಮತ್ತು 14 ಅಕ್ಟೋಬರ್ 2026 · ಬೆಂಗಳೂರು",
     coverOpen: "ತೆರೆಯಲು ಸ್ಪರ್ಶಿಸಿ",
+    scrollCue: "ಇನ್ನೂ ಮುಂದೆ ಇದೆ",
 
     brideName: "ಚಿ॥ ಸೌ॥ ಕೀರ್ತನ. ಆರ್",
     groomName: "ಚಿ॥ ರಾ॥ ಧನಂಜಯ. ಬಿ.ಆರ್",
